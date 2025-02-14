@@ -105,5 +105,15 @@
   # LLVM
   ld.lld -m aarch64elf -T linker.ld -o kernel8.elf a.o
   ```
+
+  **From ELF to Kernel Image**
+
+- Link a.o to kernel8.elf.
+  ```bash
+  # GNU
+  aarch64-linux-gnu-objcopy -O binary kernel8.elf kernel8.img
+  # LLVM
+  llvm-objcopy --output-target=aarch64-rpi3-elf -O binary kernel8.elf kernle8.img
+  ```
   
 ---
