@@ -1,7 +1,5 @@
 # Lab 0: Environment Setup
 
----
-
 ## 1. Cross-Platform Development
 
 **Cross Compiler**
@@ -66,9 +64,7 @@
   brew install qemu
   qemu-system-aarch64 --version
   ```
-
----
-
+  
 ## 2. From Source Code to Kernel Image
 
 **From Source Code to Object Files**
@@ -106,7 +102,7 @@
   ld.lld -m aarch64elf -T linker.ld -o kernel8.elf a.o
   ```
 
-  **From ELF to Kernel Image**
+**From ELF to Kernel Image**
 
 - Convert kernel8.elf to kernel8.img.
   ```bash
@@ -116,4 +112,7 @@
   llvm-objcopy --output-target=aarch64-rpi3-elf -O binary kernel8.elf kernle8.img
   ```
   
----
+**Check on QEMU**
+```bash
+qemu-system-aarch64 -M raspi3b -kernel kernel8.img -display none -d in_asm
+```
