@@ -113,6 +113,8 @@
   ```
   
 **Check on QEMU**
-```bash
-qemu-system-aarch64 -M raspi3b -kernel kernel8.img -display none -d in_asm
-```
+
+-
+  ```bash
+  qemu-system-aarch64 -M raspi3b -kernel kernel8.img -display none -d in_asm
+  ```
