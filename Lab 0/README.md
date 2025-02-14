@@ -108,7 +108,7 @@
 
   **From ELF to Kernel Image**
 
-- Link a.o to kernel8.elf.
+- Convert kernel8.elf to kernel8.img.
   ```bash
   # GNU
   aarch64-linux-gnu-objcopy -O binary kernel8.elf kernel8.img
